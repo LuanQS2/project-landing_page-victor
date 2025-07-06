@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('/src/style/header.css');
+@import url('/src/style/footer.css');
+
+:root {
+    --color-primary-1: #FFEBB8;
+    --color-primary-2: #D7AE1E;
+    --color-primary-3: linear-gradient(270deg, #D7AE1E 0%, #FFE176 50%, #D7AE1E 100%);
+    --color-primary-4: #d7b744;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff; /* Torna o trilho invisível */
+}
+
+/* Personaliza o polegar do scrollbar (a barra de rolagem visível) */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-2);  
+}
+
+/* Define o tamanho do scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Largura do scrollbar vertical */
+}
+
+
+.hero {
+    background: url('/src/img/Salão\ Ilê.svg') center/cover no-repeat;
+    height: calc(70vh - 100px); /* Ajuste conforme a altura do navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(255, 235, 184, 0.00) 50.1%, #FFEBB8 95%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.primary-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 10%;
+    z-index: 2;
+}
+
+.primary-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.primary-text h1 {
+    color: var(--color-neutral-0);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 112.5%; 
+    width: 620px;
+}
+
+.primary-text p {
+    width: 600px;
+    color: var(--color-neutral-0);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 181.023%; /* 27.153px */
+}
+
+
+.container-ori {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    padding-top: 50px;
+    margin-bottom: 150px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: none;
+    border-radius: 20px;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--color-primary-2);
+    box-shadow: 0 3px 4px var(--color-primary-4);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--color-neutral-1);
+
+}
+
+.card p {
+    font-size: 14px;
+    color: #3f3f3f;
+
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.pagination a {
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 8px 16px;
+    background-color: none;
+    color: #292929;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.pagination a:hover {
+    background: var(--color-primary-3);
+    color: white;
+}
+
+.pagination a.selected {
+    background: none;
+    color: var(--color-primary-2);
+    border: 1px solid var(--color-primary-2);
+  }
+
+
+
+@media screen and  (max-width: 430px) {
+    .logo-nav img {
+        width: 120px;
+    }
+    
+    .nav-item {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .whats {
+        width: 40px;
+     }
+
+
+    .copyright {
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: 16px;
+    } 
+
+}

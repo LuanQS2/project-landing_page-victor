@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('footer.css');
+
+:root {
+    --color-primary-1: #FFEBB8;
+    --color-primary-2: #D7AE1E;
+    --color-primary-3: linear-gradient(270deg, #D7AE1E 0%, #FFE176 50%, #D7AE1E 100%);
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff; /* Torna o trilho invisível */
+}
+
+/* Personaliza o polegar do scrollbar (a barra de rolagem visível) */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-2);  
+}
+
+/* Define o tamanho do scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Largura do scrollbar vertical */
+}

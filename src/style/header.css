@@ -1,0 +1,162 @@
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: transparent;
+}
+
+.top-bar {
+    background-color: var(--color-primary-2);
+    padding: 0.5rem 0;
+}
+
+.list-unstyled {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    list-style: none;
+    padding: 0 2%;
+    gap: 20px;
+}
+  
+.list-unstyled a {
+    font-size: 1.2rem; 
+    color: #212529;    
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+  
+.list-unstyled a:hover {
+    color: var(--color-neutral-0); 
+}
+
+
+#navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 8%;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--color-neutral-0);
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: var(--color-primary-2);
+}
+
+
+.abrir-menu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.abrir-menu .abrir-icon {
+    color: var(--color-primary-2);
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+/*menu mobile*/
+.menu-mobile {
+    background: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+
+.btn-fechar {
+    padding: 20px 5%;
+}
+
+.btn-fechar .fechar-icon {
+    color: var(--color-primary-2);
+    font-size: 40px;
+}
+
+.menu-mobile .div-ul ul li a {
+    color: var(--color-neutral-0);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 30px 8%;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-mobile .div-ul ul li a:hover {
+    color: #1a1a1a;
+}
+
+.menu-mobile .div-ul ul {
+    text-align: right;
+}
+
+.overlay-menu {
+    background-color: #ffffffab;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+      .abrir-menu, .logo-mobile {
+        display: none;
+    }
+    
+}
+  
+  @media screen and (max-width: 1024px) {
+      .abrir-menu, .logo-mobile {
+        display: block;
+        padding: 20px 4%;
+    }
+  
+    .menu, .logo {
+        display: none;
+    }
+    
+}
