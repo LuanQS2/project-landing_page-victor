@@ -19,12 +19,16 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    background-color: var(--color-primary-1);
+    overflow-x: hidden; /* Impede o scroll horizontal */
+    overflow-y: auto;
+    scroll-behavior: smooth; 
 }
 
-body {
-    background-color: var(--color-primary-1);
+ul {
+    list-style: none;
 }
 
 section {

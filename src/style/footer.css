@@ -63,3 +63,29 @@ footer {
     justify-content: center;
     padding: 10px;
 }
+
+
+/* Em footer.css */
+@media screen and (max-width: 992px) { /* Para tablets */
+    .footer-primary {
+        flex-direction: column; /* Empilha as colunas */
+        gap: 50px; /* Reduza o espaço entre elas */
+        padding: 40px 5%; /* Ajuste o padding horizontal */
+    }
+    .logo-footer,
+    .mb-md-menu,
+    .col-md-contato {
+        text-align: center; /* Centralize o texto */
+        width: 100%; /* Ocupa a largura total */
+    }
+}
+
+@media screen and (max-width: 576px) { /* Para celulares */
+    .footer-primary {
+        gap: 30px;
+        padding: 30px 2%;
+    }
+    .logo-footer img {
+        width: 100px; /* Ajuste o tamanho do logo se necessário */
+    }
+}

@@ -29,7 +29,7 @@ header {
 }
   
 .list-unstyled a:hover {
-    color: var(--color-neutral-0); 
+    color: var(--color-neutral-2); 
 }
 
 
@@ -85,7 +85,7 @@ header {
 
 /*menu mobile*/
 .menu-mobile {
-    background: #fff;
+    background: var(--color-primary-3);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -110,12 +110,12 @@ header {
 }
 
 .btn-fechar .fechar-icon {
-    color: var(--color-primary-2);
+    color: var(--color-neutral-1);
     font-size: 40px;
 }
 
 .menu-mobile .div-ul ul li a {
-    color: var(--color-neutral-0);
+    color: var(--color-neutral-1);
     font-size: 24px;
     font-weight: 600;
     padding: 30px 8%;
@@ -159,4 +159,10 @@ header {
         display: none;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+    .list-unstyled {
+        padding: 0 8%;
+    }
 }
